@@ -10,3 +10,71 @@
 body{
   overflow-x: hidden;
 }
+/* footer */
+@media (max-width: 768px) {
+  .footer > .container > .d-flex.justify-content-between {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .footer > .container > .d-flex.justify-content-between > div {
+    width: 100% !important;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Input + button in contact */
+  .footer input.form-control {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer div.d-flex > button.btn-danger {
+    width: 100% !important;
+  }
+
+  /* Social icons wrap */
+  .footer .d-flex.justify-content-between.mt-3 {
+    flex-wrap: wrap !important;
+    gap: 1rem;
+  }
+
+  /* Optional: center text on small */
+  .footer p.text-center {
+    font-size: 0.9rem;
+  }
+}
+
+/* Home */
+/* Landing section responsiveness */
+@media (max-width: 768px) {
+  .landing > div {
+    width: 90% !important; /* from 600px to 90% width */
+    height: auto !important; /* allow height to grow */
+    margin-left: 0 !important; /* remove left margin */
+    padding: 1rem !important;
+    text-align: center !important;
+  }
+
+  .landing h1, .landing h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .landing img {
+    width: 150px !important;
+  }
+}
+
+/* Testimonials responsive */
+@media (max-width: 768px) {
+  .d-flex.justify-content-evenly {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .d-flex.justify-content-evenly > div {
+    margin-bottom: 1.5rem;
+    width: 90% !important;
+  }
+}
+
+/*  */

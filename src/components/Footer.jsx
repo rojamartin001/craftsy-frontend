@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <>
             <div className='footer d-flex flex-column  align-items-center justify-content-center mt-5 shadow'>
-                <div style={{ height: '300px' }} className='mt-5 container w-100'>
+                <div style={{ minHeight: '300px' }} className='mt-5 container w-100'>
                     <div className=' d-flex justify-content-between'>
                         {/* intro */}
                         <div style={{ width: '400px' }}>

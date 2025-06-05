@@ -3,6 +3,7 @@ import { FloatingLabel, Form, Spinner } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { loginAPI, registerAPI } from '../services/allAPI'
 import { tokenAuthContext } from '../contexts/AuthContextAPI'
+import loginImg from '../assets/login-image.png'
 
 
 const Auth = ({ insideRegister }) => {
@@ -123,10 +124,10 @@ const Auth = ({ insideRegister }) => {
         <div className='card shadow p-2 '>
           <div className='row align-items-center'>
             <div className='col-lg-6'>
-              <img className='img-fluid' src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="" />
+              <img className='img-fluid' src={loginImg} alt="" />
             </div>
             <div className='col-lg-6'>
-              <h1 className='mt-2'>Craftsy</h1>
+              <h1 className='mt-2 text-danger'>Craftsy</h1>
               <h5 className='mt-2'>Sign {insideRegister ? 'up' : 'in'} to your account</h5>
               <Form onSubmit={insideRegister ? handleRegister : handleLogin} noValidate>
 
@@ -153,12 +154,12 @@ const Auth = ({ insideRegister }) => {
                 {
                   insideRegister ?
                     <div>
-                      <button type="submit" className='btn btn-primary mb-2'>Register</button>
+                      <button type="submit" className='btn btn-danger text-light mb-2'>Register</button>
                       <p>Already a User? Please click here to <Link to={'/login'}>Login</Link></p>
                     </div>
                     :
                     <div>
-                      <button type='submit' className='btn btn-primary d-flex mb-2 '>Login{isLogin && <Spinner className='ms-2' animation="border" variant="light" />}</button>
+                      <button type='submit' className='btn btn-danger text-light d-flex mb-2 '>Login{isLogin && <Spinner className='ms-2' animation="border" variant="light" />}</button>
                       <p>New User? Please click here to <Link to={'/register'}>Register</Link></p>
                     </div>
                 }

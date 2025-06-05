@@ -1,6 +1,7 @@
 
 import React, { useContext, useState } from 'react'
 import { Card, Modal } from 'react-bootstrap'
+
 import { useNavigate } from 'react-router-dom';
 import SERVER_URL from '../services/serverURL';
 import { profilePicContext } from '../contexts/ContextApi';
@@ -62,7 +63,7 @@ const CraftCard = ({ craft }) => {
 
           </div>
           <div className='mt-2 float-start'>
-                  <a href={craft?.link} className='btn btn-secondary ms-4 ' target='_blank'><i className="fa-brands fa-youtube text-danger"></i></a>        
+                  <a href={craft?.link} className='btn btn-danger ms-4 ' target='_blank'><i className="fa-brands fa-youtube "></i></a>        
                   
           </div>
         </Modal.Body>
